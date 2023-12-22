@@ -381,6 +381,13 @@
   
 }
 @media (max-width:500px){
+
+  .visit .vwrapper a .vitem{
+    max-width: 260px !important;
+  }
+  .vtitle{
+    max-width: 250px !important;
+  }
   .features{
     display: flex;
     flex-direction: column;
@@ -529,19 +536,18 @@
   width: 70vw;
   text-align: center;
   margin-bottom: 100px;
+
   
 }
 .visit .vwrapper{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   flex-wrap: wrap;
-  width: 70vw;
+  width: 90vw;
   overflow: visible;
-
-  animation: scale 5s linear infinite;
-  
+  flex-direction: row;
 }
 
 .visit .vwrapper a .vitem{
@@ -556,9 +562,22 @@
   align-items: center;
   flex-direction: column;
   border-radius:33px 0 33px 0;
+  overflow: hidden;
  
 
   
+}
+.visit .vwrapper a .whatsapp{
+  background:green;
+}
+
+.visit .vwrapper a .email{
+  background: blue;
+ 
+}
+
+.visit .vwrapper a .vitem:hover{
+  animation: scale 3s linear infinite;
 }
 
 
@@ -569,10 +588,15 @@
 
 @keyframes scale {
   0%{transform: scale(1)}
-  50%{transform: scale(1.2)}
+  50%{transform: scale(1.1)}
   100%{transform: scale(1)}
 }
 
+
+.vtitle{
+  overflow: scroll;
+ max-width: 300px;
+}
 
 
 

@@ -5,6 +5,8 @@ import Script from "next/script";
 import TypedJS from "../components/Typed/Type";
 import {get} from '../functions/axios.get'
 import Location from '../components/Icons/Location'
+import Whatsapp from '../components/Icons/Whatsapp'
+import Email from '../components/Icons/Email'
  
  async function getData(success) {
   await get('http://localhost:3000/api?key='+process.env.key,(data)=>{
@@ -236,6 +238,24 @@ let data;
               <Location className={styles.icon}/>
             </div>
              <h2 className={styles.vtitle}>Beehama Ganderbal</h2>
+
+          </div>
+          </a>
+          <a href='https://www.google.com/maps/place/Malshahi+Bagh+191201/@34.2090553,74.7872872,200m/data=!3m1!1e3!4m6!3m5!1s0x38e1833b6874b0f9:0xb01ee6de77c0d80c!8m2!3d34.2115213!4d74.7914171!16s%2Fg%2F12hr56c6f?entry=ttu' target="_blank">
+          <div className={`${styles.vitem} ${styles.whatsapp}`}>
+            <div className={styles.icon}>
+              <Whatsapp className={styles.icon}/>
+            </div>
+             <h2 className={styles.vtitle}>+91 7051499639</h2>
+
+          </div>
+          </a>
+          <a href='https://www.google.com/maps/place/Malshahi+Bagh+191201/@34.2090553,74.7872872,200m/data=!3m1!1e3!4m6!3m5!1s0x38e1833b6874b0f9:0xb01ee6de77c0d80c!8m2!3d34.2115213!4d74.7914171!16s%2Fg%2F12hr56c6f?entry=ttu' target="_blank">
+          <div className={`${styles.vitem} ${styles.email}`}>
+            <div className={styles.icon}>
+              <Email className={styles.icon}/>
+            </div>
+             <h2 className={styles.vtitle}>mohammadayaan08128@gmail.com</h2>
 
           </div>
           </a>
