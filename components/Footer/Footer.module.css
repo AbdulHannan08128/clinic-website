@@ -1,0 +1,36 @@
+.footer .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  opacity: 70%;
+}
+.footer .grid .logo{
+    display: grid;
+    place-items: center;
+}
+.footer .grid .logo .lgo{
+    width: 400px;
+    height: 380px;
+    filter: brightness(170%);
+}
+.footer .grid .ql{
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: 40px;
+    padding-top: 30px;
+}
+.footer .grid .ql div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer .grid .ql div h5{
+    font-size: 3rem;
+    text-decoration: underline;
+}
+.footer .grid .ql div ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}

@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar/Nav'
+import Footer from '../components/Footer/Foot'
 import {AOSInit} from './AOS/aos'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
       
         {children}
         </div>
-        
+        <Footer/>
         </body>
         
     </html>
