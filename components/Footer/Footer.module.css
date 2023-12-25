@@ -1,36 +1,87 @@
-.footer .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  opacity: 70%;
-}
-.footer .grid .logo{
-    display: grid;
-    place-items: center;
-}
-.footer .grid .logo .lgo{
-    width: 400px;
-    height: 380px;
-    filter: brightness(170%);
-}
-.footer .grid .ql{
+.footer{
+    width: 100vw;
     display: flex;
-    align-items: baseline;
-    justify-content: baseline;
-    gap: 40px;
-    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(var(--callout-border-rgb), 0.9);
 }
-.footer .grid .ql div{
+.footer .cont{
+    width: 100vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
 }
-.footer .grid .ql div h5{
-    font-size: 3rem;
-    text-decoration: underline;
+.footer .links{
+    width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
 }
-.footer .grid .ql div ul li{
+
+.footer .links div ul li{
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
+   
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    opacity: 0.6;
+    padding: 7px 0px;
+}
+
+.footer .links div ul li:hover{
+    opacity: 1;
+}
+
+.footer .info{
+    width: 70vw;
+    position: relative;
+    /* overflow: hidden; */
+}
+.footer .info span:hover{
+     opacity: 1;
+     cursor: pointer;
+}
+.footer .info span{
+    height: 30px;
+    border-radius: 22px;
+    background: rgba(var(--card-rgb), 0.2);
+    padding: 5px;
+    border: 1px solid rgba(var(--card-border-rgb), 0.2);
+    opacity: 0.7;
+}
+.footer .info .left{
+    position: absolute;
+    left: 0;
+}
+.footer .info .right{
+    position: absolute;
+    right: 0;
+}
+
+
+@media (max-width:700px) {
+    .footer .links{
+       display: flex;
+       flex-direction: column;
+       gap: 30px;
+    }
+    .footer .info{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer .info span{
+      position: static !important;
+    }
+    .copy{
+        font-size: 0.8rem;
+        text-align: center;
+    }
 }
