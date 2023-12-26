@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.cont}>
         <div className={styles.links}>
           <div>
-            <Image src="/logo-no-bg.png" width={200} height={200} alt="LOGO" />
+            <Image src="/logo-no-bg.png" width={200} height={200} alt="LOGO" className={styles.flogo} />
           </div>
           <div>
             <h5>Quick Links</h5>

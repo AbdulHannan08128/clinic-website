@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid rgba(var(--callout-border-rgb), 0.9);
+    border-top: 1px solid rgba(var(--callout-border-rgb), 0.9);
 }
 .footer .cont{
     width: 100vw;
@@ -83,5 +83,8 @@
     .copy{
         font-size: 0.8rem;
         text-align: center;
+    }
+    .flogo{
+        display: none;
     }
 }
