@@ -6,7 +6,7 @@ import {AOSInit} from './AOS/aos'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: '---Golden Hands---',
+  title: 'Golden Hands',
   description: 'A clinic opening soon in Beehama Ganderbal...',
 } 
 
