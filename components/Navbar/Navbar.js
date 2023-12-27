@@ -32,7 +32,7 @@ element.classList.add('hide')
     <nav className={styles.nav}>
     
       <ul>
-      <span className={styles.logo}><Image src="/gh.png" width={100} height={80} alt='GH'/></span>
+      <span className={styles.logo}><Image src="/gh-3.png" width={100} height={80} alt='GH'/></span>
         
         <li>
         <Link href='/'>Home</Link>
@@ -65,7 +65,7 @@ element.classList.add('hide')
       <ul>
 
 
-      <span className={styles.logoMob}><Image src="/gh.png" width={160} height={80} alt='GH'/></span>  
+      <span className={styles.logoMob}><Image src="/gh-3.png" width={160} height={80} alt='GH'/></span>  
         
         <li>
         <Link href='/' onClick={toggleHide}>Home</Link>

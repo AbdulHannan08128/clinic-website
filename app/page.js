@@ -241,7 +241,7 @@ let data;
 
           </div>
           </a>
-          <a href='https://www.google.com/maps/place/Malshahi+Bagh+191201/@34.2090553,74.7872872,200m/data=!3m1!1e3!4m6!3m5!1s0x38e1833b6874b0f9:0xb01ee6de77c0d80c!8m2!3d34.2115213!4d74.7914171!16s%2Fg%2F12hr56c6f?entry=ttu' target="_blank">
+          <a href='https://wa.me/917051499639?text=Hi, I have come from Your Website' target="_blank">
           <div className={`${styles.vitem} ${styles.whatsapp}`}>
             <div className={styles.icon}>
               <Whatsapp className={styles.icon}/>
@@ -250,7 +250,7 @@ let data;
 
           </div>
           </a>
-          <a href='https://www.google.com/maps/place/Malshahi+Bagh+191201/@34.2090553,74.7872872,200m/data=!3m1!1e3!4m6!3m5!1s0x38e1833b6874b0f9:0xb01ee6de77c0d80c!8m2!3d34.2115213!4d74.7914171!16s%2Fg%2F12hr56c6f?entry=ttu' target="_blank">
+          <a href='mailto:mohammadayaan08128@mgmail.com' target="_blank">
           <div className={`${styles.vitem} ${styles.email}`}>
             <div className={styles.icon}>
               <Email className={styles.icon}/>

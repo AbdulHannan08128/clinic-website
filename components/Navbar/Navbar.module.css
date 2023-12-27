@@ -39,8 +39,14 @@
 .logo {
   font-size: 2rem;
   position: relative;
-  right: 300px;
+  right: 400px;
+  opacity: 0.5;
 }
+.logo:hover {
+ cursor: pointer;
+  opacity:1;
+}
+
 
 .book {
   height: 100px;

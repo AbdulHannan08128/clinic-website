@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Opacity } from "@mui/icons-material";
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} data-aos="fade-down">
       <div className={styles.cont}>
         <div className={styles.links}>
           <div>
-            <Image src="/gh.png" width={150} height={130} alt="LOGO" className={styles.flogo} />
+            <Image src="/gh-3.png" width={150} height={130} alt="LOGO" className={styles.flogo} />
           </div>
           <div>
             <h5>Quick Links</h5>
