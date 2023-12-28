@@ -143,3 +143,17 @@ a {
   overflow-x: hidden !important;
   width: 100vw !important;
 }
+
+.loading{
+  position: relative;
+  top: 0px;
+  background-color: blue;
+  height: 2px;
+  width: 20vw;
+  animation: a 0.2s linear 1;
+  animation-fill-mode: forwards;
+}
+@keyframes a {
+  0%{width: 0vw;}
+  100%{width: 100vw;}
+}
