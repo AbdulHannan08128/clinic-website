@@ -107,10 +107,10 @@ let data;
       </div>
       
       <div className={styles.features} data-aos="fade-up">
-        <h1>
+        <h2 className={styles.h2}>
           OUR FEATURES
           <div className={styles.line}></div>
-        </h1>
+        </h2>
 
         <div data-aos="zoom-out-down">
           <span className={styles.ftext}>
@@ -180,10 +180,10 @@ let data;
       </div>
 
       <div className={styles.services}>
-        <h1>
+        <h2 className={styles.h2}>
           OUR SERVICES
           <div className={styles.line}></div>
-        </h1>
+        </h2>
         <div className={styles.swrapper}>
           <div data-aos="fade-right">
             <span className={styles.simg}>
@@ -227,10 +227,10 @@ let data;
       </div>
 
       <div className={styles.visit} data-aos="fade-down">
-      <h1>
+      <h2 className={styles.h2}>
           VISIT US
           <div className={styles.line}></div>
-        </h1>
+        </h2>
         <div className={styles.vwrapper} data-aos="flip-up">
         <a href='https://www.google.com/maps/place/Malshahi+Bagh+191201/@34.2090553,74.7872872,200m/data=!3m1!1e3!4m6!3m5!1s0x38e1833b6874b0f9:0xb01ee6de77c0d80c!8m2!3d34.2115213!4d74.7914171!16s%2Fg%2F12hr56c6f?entry=ttu' target="_blank">
           <div className={styles.vitem}>

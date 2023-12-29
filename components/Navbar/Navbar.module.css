@@ -29,6 +29,7 @@
   position: relative;
   right: 100px;
   text-transform: uppercase;
+  transition: 0.1s;
 }
 .menu{
     display: none;
