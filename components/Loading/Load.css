@@ -1,0 +1,37 @@
+.load{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    z-index: 2;
+    display: grid;
+    
+}
+/* .load div{
+  width: 100px;
+  height: 100px;
+  border:8px solid white;
+  border-radius: 50%;
+  border-top: 5px solid red;
+  animation:loading 0.5s linear infinite;
+}
+@keyframes loading {
+    0%{rotate: 0;}
+    100%{rotate: 360deg;}
+} */
+
+
+.load div{
+    width: 0vw;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #0096FF;
+    animation:load 0.4s linear 1;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes load {
+    0%{width: 0;}
+    100%{width: 100vw;}
+} 
