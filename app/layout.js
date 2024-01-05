@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AOSInit/>
       <body className={inter.className}>
+        
         <div className='no-outflow'>
+        
       <Navbar/>
       
         {children}

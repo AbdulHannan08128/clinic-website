@@ -8,7 +8,16 @@ import Location from '../components/Icons/Location'
 import Whatsapp from '../components/Icons/Whatsapp'
 import Email from '../components/Icons/Email'
  import Contact from '../components/Con-Btn/Contact'
+ 
+
  async function getData(success) {
+
+
+ 
+
+
+ 
+
   await get('http://localhost:3000/api?key='+process.env.key,(data)=>{
      
      success(data)
@@ -16,6 +25,7 @@ import Email from '../components/Icons/Email'
   (err)=>{
       console.log('Something went wrong while sending get request...');
   });
+  
 }
 
 
@@ -29,7 +39,9 @@ let data;
 
 //  console.log(data);
   return (
+    
     <main className={styles.main}>
+     
       {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
