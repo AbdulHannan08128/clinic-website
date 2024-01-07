@@ -18,7 +18,7 @@ import Email from '../components/Icons/Email'
 
  
 
-  await get('http://localhost:3000/api?key='+process.env.key,(data)=>{
+  await get('http://clinic-website-sable.vercel.app/api?key='+process.env.key,(data)=>{
      
      success(data)
   },
