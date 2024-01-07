@@ -4,7 +4,7 @@
     align-items: center;
     position: relative;
     padding: 4rem 0;
-    height: 100vh;
+    height: 80vh;
   }
   
   .center::before {
@@ -216,7 +216,8 @@
 
     .img{
       /* background: url(/gh-3.png)center center/cover; */
-      background: url(/lap.jpg)center center/cover;
+      background: url(/medicine-1.png)center center/cover;
+      /* background: url(/lap.jpg)center center/cover; */
       opacity: 70% !important;
       height: 700px;
       

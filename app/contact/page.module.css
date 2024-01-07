@@ -1,0 +1,28 @@
+.contact{
+    min-height: 100vh;
+}
+.cont{
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 1.8fr 1fr;
+}
+.cont .img{
+  background: url(/lap.jpg) no-repeat center center/cover;
+  /* background:red; */
+}
+.cont .form{
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width:550px){
+   .cont{
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+
+   }
+   .cont .img{
+    display: none;
+   }
+}

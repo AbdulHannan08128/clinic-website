@@ -18,10 +18,10 @@ export default function Footer() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/About">About</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li>
                 <Link href="/">Book Appointment</Link>
