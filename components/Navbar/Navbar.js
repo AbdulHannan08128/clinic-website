@@ -38,7 +38,7 @@ element.classList.add('hide')
         <Link href='/'>Home</Link>
         </li>
         <li>
-        <Link href='/about'>About</Link>
+        <Link href='/About'>About</Link>
         </li>
         <li>
         <Link href='/contact'>Contact</Link>
@@ -71,7 +71,7 @@ element.classList.add('hide')
         <Link href='/' onClick={toggleHide}>Home</Link>
         </li>
         <li>
-        <Link href='/about' onClick={toggleHide}>About</Link>
+        <Link href='/About' onClick={toggleHide}>About</Link>
         </li>
         <li>
         <Link href='/contact' onClick={toggleHide}>Contact</Link>
