@@ -1,5 +1,5 @@
 import axios from "axios";
-export async function get(url,body,success, fail){
+export async function post(url,body,success, fail){
     axios.post(url, body)
       .then(res=>{
         if (typeof(success)=='function') {

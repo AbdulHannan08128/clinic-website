@@ -2,6 +2,7 @@
  import connectDB from '@/utils/db';
  import { addAppointment } from '@/functions/addAppointment';
  import { getAppointment } from '@/functions/getAppointment';
+ import {checkDetails} from './contact'
 
 //*****https://nextjs.org/docs/app/api-reference/functions/next-request******
 
@@ -20,6 +21,5 @@ connectDB();
 
 
  export async function POST(request) {
-   const res = await request.json();
-   return Response.json({ res }) ;
+  return checkDetails(request, NextResponse)
  }

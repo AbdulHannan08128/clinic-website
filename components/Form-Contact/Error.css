@@ -1,0 +1,32 @@
+.wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.wrapper div.error{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    animation: err 3s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes err {
+    0%{opacity: 100%;}
+    100%{opacity: 0%; display: none;}
+}
+
+@media (max-width:500px){
+    .wrapper{
+        position: static;
+    }
+}
