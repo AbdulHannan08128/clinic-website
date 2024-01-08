@@ -12,21 +12,25 @@
 .cform input{
 
    padding: 20px;
-   background-color: black;
-
+   background-color: #fff;
+   color: black;
    outline: none;
   
    font-size: 1.3rem;
    max-width: 400px;
    border: 2px solid rgba(var(--callout-border-rgb), 0.5);
-   
+   border-radius: 20px;
+   font-weight: bold;
 }
 .cform textarea{
 
     padding: 20px;
-    background-color: black;
-
+    background-color: #fff;
+    color: black;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
     outline: none;
+    font-weight: bold;
     
     font-size: 1.3rem;
     max-width: 400px;
@@ -56,11 +60,12 @@
   .cform input{
   
      padding: 20px;
-     background-color: black;
+     background-color: #fff;
+     color: black;
   
      outline: none;
     
-     font-size: 1.3rem;
+     font-size: 1.3rem; 
      max-width: 80vw;
      border: 2px solid rgba(var(--callout-border-rgb), 0.5);
      
@@ -68,7 +73,8 @@
   .cform textarea{
   
       padding: 20px;
-      background-color: black;
+      background-color: #fff;
+      color: black;
   
       outline: none;
       

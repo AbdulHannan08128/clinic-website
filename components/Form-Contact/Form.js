@@ -27,6 +27,7 @@ export default function Form(props) {
     event.preventDefault();
     const formData = new FormData(event.target);
     let URL = props.URL;
+    
     post(URL, formData, (data) => {
       if (data.data.status == "NL") {
         setError(["Write Name Properly"]);
