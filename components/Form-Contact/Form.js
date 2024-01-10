@@ -21,9 +21,7 @@ export default function Form(props) {
   }
   async function onSubmit(event) {
     setClick(true);
-    setTimeout(() => {
-      setClick(false);
-    }, 1000);
+    
     event.preventDefault();
     const formData = new FormData(event.target);
     let URL = props.URL;
@@ -34,16 +32,19 @@ export default function Form(props) {
         setTimeout(() => {
           setError(false);
         }, 3000);
+        setClick(false);
       } else if (data.data.status == "EL") {
         setError(["Write Email Properly"]);
         setTimeout(() => {
           setError(false);
         }, 3000);
+        setClick(false);
       } else if (data.data.status == "ML") {
         setError(["Write Message Properly"]);
         setTimeout(() => {
           setError(false);
         }, 3000);
+        setClick(false);
       } else if (data.data.status == 200) {
         document.querySelectorAll("input").value = "";
         setSuccess(["Form Submitted Successfully"]);
@@ -52,11 +53,13 @@ export default function Form(props) {
         setText("");
         document.querySelectorAll("input").value = "";
         document.querySelectorAll("textarea").value = "";
+        setClick(false);
         setTimeout(() => {
           setSuccess(false);
         }, 3000);
       }
     });
+    
   }
 
   return (

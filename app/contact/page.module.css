@@ -17,12 +17,25 @@
 /lap.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+display: grid;
+place-items: center;
+}
+
+.cont .img h1{
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px #000;
 }
 .cont .form{
   display: grid;
   place-items: center;
 }
 
+@media (max-width:1000px){
+  .cont .img h1{
+    font-size: 3rem;
+  }
+}
 @media (max-width:550px){
    .cont{
     grid-template-columns: 1fr;

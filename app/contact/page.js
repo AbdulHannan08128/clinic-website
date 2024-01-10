@@ -11,7 +11,7 @@ export default function page() {
   return (
     <div className={styles.contact}>
         <div className={styles.cont}>
-          <div className={styles.img}></div>
+          <div className={styles.img}><h1>Contact Us</h1></div>
           <div className={styles.form}>
             <Form URL={process.env.url}/>
           </div>

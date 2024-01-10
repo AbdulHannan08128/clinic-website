@@ -8,7 +8,7 @@ export async function checkDetails(request, Response){
     return Response.json({status:'NL'}) ;
     
   }
-  else if (data.get('Message').length<30 || data.get('Message').includes(' ')==false) {
+  else if (data.get('Message').length<15 || data.get('Message').includes(' ')==false) {
     return Response.json({status:'ML'}) ;
   }
   else if (data.get('email').length==0 || data.get('email').includes(' ')==true) {
