@@ -8,7 +8,8 @@ import Location from '../components/Icons/Location'
 import Whatsapp from '../components/Icons/Whatsapp'
 import Email from '../components/Icons/Email'
  import Contact from '../components/Con-Btn/Contact'
- 
+ import Navbar from '../components/Navbar/Nav'
+ import Footer from '../components/Footer/Foot'
 
  async function getData(success) {
 
@@ -39,7 +40,8 @@ let data;
 
 //  console.log(data);
   return (
-    
+    <>
+    <Navbar/>
     <main className={styles.main}>
      
       {/* <div className={styles.description}>
@@ -278,5 +280,7 @@ let data;
 
      <Contact/>
     </main>
+    <Footer/>
+    </>
   );
 }

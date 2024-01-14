@@ -1,20 +1,35 @@
 // components/LoginForm.js
 'use client'
+import setCookie from './setCookie';
+import Redirect from './Redirect'
+import {post} from '../../../functions/axios.post'
 import React, { useState } from 'react';
 
-const LoginForm = () => {
+
+const LoginForm = (props) => {
   const [loginId, setLoginId] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your login logic here
+    let data = {
+        id:loginId,
+        password:password
+    }
+    post(props.URL,data,(DATA)=>{
+       if(DATA.data.auth==props.KEY){
+            setCookie();
+            Redirect();
+       }
+       
+    })
     
   };
 
   return (
     <div style={{width:'100vw', height:'100vh', display:'grid', placeItems:'center'}}>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} action='/admin'>
       <style jsx>{`
         form {
           max-width: 400px;

@@ -2,6 +2,8 @@ import styles from "./page.module.css";
 import TypedJS from "../../components/Typed/Type";
 import Contact from "../../components/Con-Btn/Contact";
 import Image from 'next/image'
+import Navbar from '../../components/Navbar/Nav'
+import Footer from '../../components/Footer/Foot'
 export const metadata = {
   title: "Golden Hands || About",
   description: "About Our Clinic and More",
@@ -9,6 +11,8 @@ export const metadata = {
 };
 export default function page() {
   return (
+    <>
+    <Navbar/>
     <main>
       <div className={styles.about}>
         <div className={styles.center}>
@@ -80,5 +84,7 @@ export default function page() {
       </div>
       <Contact />
     </main>
+    <Footer/>
+    </>
   );
 }

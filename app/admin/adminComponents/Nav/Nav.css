@@ -1,0 +1,45 @@
+nav.nav{
+    width: 100%;
+    height: 70px;
+    background-color: #ddff00;
+    position: fixed; 
+    left: 0;
+    z-index: 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+nav.nav .logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav.nav .logo div{
+    position: absolute;
+    right: 390px;
+    width: 60px;
+    height: 60px;
+    background: url(/gh-3.png) no-repeat center center/cover;
+    background-color: black;
+    border-radius: 20px;
+}
+
+nav.nav .account{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.nav .account div{
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    height: 70px;
+   
+    background: rgba(var(--card-rgb), 1.9);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+   
+}

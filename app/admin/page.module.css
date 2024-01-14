@@ -1,0 +1,90 @@
+.ul{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.ul div{
+    width: 250px;
+    height: 200px;
+    background-color: #fff000;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    padding: 10px;
+
+   
+}
+.ul div.sec{
+    width: 250px;
+    height: 200px;
+    background-color: #f6d8ac;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    padding: 10px;
+
+   
+}
+
+.ul  div span.icon{
+    border-bottom: 3px solid purple;
+    width: 200px;
+    text-align: center;
+}
+.ul div span.icon svg{
+   font-size: 6rem;
+   color: rgb(124, 40, 124);
+   
+   
+}
+
+.ul div span.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+}
+.ul div span.details span{
+    color: green;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.chart{
+    width: 100%;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.chart div{
+    width: 580px;
+    height: 380px;
+    
+   
+}
+
+@media (max-width:650px) {
+    .chart div{
+       
+       overflow-x: scroll;
+       width: 100%;
+       height: 100%;
+    }
+}
+

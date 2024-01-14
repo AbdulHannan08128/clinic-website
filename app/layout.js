@@ -21,14 +21,16 @@ export default function RootLayout({ children }) {
         
         <div className='no-outflow'>
         
-      <Navbar/>
+     
       
         {children}
         </div>
-        <Footer/>
         </body>
         
     </html>
    
   )
+  
 }
+
+
