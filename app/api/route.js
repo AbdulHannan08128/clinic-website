@@ -1,75 +1,25 @@
-// components/LoginForm.js
-'use client'
-import React, { useState } from 'react';
+import {NextResponse} from 'next/server'
+import connectDB from '@/utils/db';
+import { addAppointment } from '@/functions/addAppointment';
+import { getAppointment } from '@/functions/getAppointment';
+import {checkDetails} from './contact'
 
-const LoginForm = () => {
-  const [loginId, setLoginId] = useState('');
-  const [password, setPassword] = useState('');
+//*****https://nextjs.org/docs/app/api-reference/functions/next-request******
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your login logic here
-    
-  };
+// https://nextjs.org/docs/app/building-your-application/routing/route-handlers#request-body
 
-  return (
-    <div style={{width:'100vw', height:'100vh', display:'grid', placeItems:'center'}}>
-    <form onSubmit={handleSubmit}>
-      <style jsx>{`
-        form {
-          max-width: 400px;
-          margin: 0 auto;
-          padding: 20px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
-        label {
-          display: block;
-          margin-bottom: 8px;
-        }
 
-        input {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 16px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-        }
+connectDB();
 
-        button {
-          width: 100%;
-          padding: 10px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-      `}</style>
-      <label htmlFor="loginId">Login ID</label>
-      <input
-        type="text"
-        id="loginId"
-        value={loginId}
-        onChange={(e) => setLoginId(e.target.value)}
-        required
-      />
+export async function GET(req){
+ let u = [];  
+await getAppointment((data)=>{u=data})
+return NextResponse.json(u)
+}
 
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
 
-      <button type="submit">Login</button>
-    </form>
-    </div>
-  );
-};
 
-export default LoginForm;
+export async function POST(request) {  
+ return checkDetails(request, NextResponse)
+}
