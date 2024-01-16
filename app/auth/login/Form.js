@@ -9,24 +9,34 @@ import React, { useState } from 'react';
 const LoginForm = (props) => {
   const [loginId, setLoginId] = useState('');
   const [password, setPassword] = useState('');
-
+  const [loading, setLoading] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     // Add your login logic here
+    setLoading(true);
     let data = {
         id:loginId,
         password:password
     }
     post(props.URL,data,(DATA)=>{
+      
        if(DATA.data.auth==props.KEY){
-            setCookie();
-            Redirect();
+            setCookie('auth', DATA.data.auth);
+             Redirect('/admin');
+             setLoading(false);
+            
        }
        else{
-        console.log('Security Alert');
+        
+        Redirect('/')
+        setLoading(false)
+
        }
+    
        
     })
+
     
   };
 
@@ -84,7 +94,7 @@ const LoginForm = (props) => {
         required
       />
 
-      <button type="submit">Login</button>
+      {loading?<button type="submit">Logging In</button>:<button type="submit">Login</button>}
     </form>
     </div>
   );

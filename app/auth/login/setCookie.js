@@ -1,6 +1,6 @@
 'use server'
 import {cookies} from 'next/headers'
-export default async function SetCookie(){
+export default async function SetCookie(name,value){
     console.log('cookie-set'); 
-     cookies().set('auth', process.env.key)
+     cookies().set(name, value)
 }

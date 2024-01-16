@@ -24,16 +24,25 @@ else if(path=='/admin'){
     
   if (cookie.value==process.env.key) {
     isLoggedIn = true;
-  } else {
-    isLoggedIn = false;
+  } 
+  else {
+    isLoggedIn = 'login'
   }
+}
+else {
+  isLoggedIn = 'login'
 }
 }
 
-  if (isLoggedIn) {
+  if (isLoggedIn == true) {
     isLoggedIn=false;
     return NextResponse.next();
-  } else {
+  }
+  else if(isLoggedIn=='login'){
+    console.log('success');
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+  else {
     
     return NextResponse.redirect(new URL("/", request.url));
   }

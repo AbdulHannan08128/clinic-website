@@ -12,6 +12,6 @@ export async function POST(request) {
     }
     else{
 
-        return NextResponse.redirect(new URL("/admin", request.url));
+        return NextResponse.redirect(new URL("/About", request.url));
     }
 }     
