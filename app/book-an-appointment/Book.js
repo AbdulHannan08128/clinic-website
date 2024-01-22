@@ -17,8 +17,9 @@ const BookingForm = (props) => {
         let success = data.data.success;
         if (success) {
           console.log("Form Submitted Successfully");
+
         } else {
-         console.log("Something Went Wrong");
+        alert("Something Went Wrong");
         }
       });
 
@@ -58,7 +59,7 @@ const BookingForm = (props) => {
       Math.floor(Math.random() * 10).toString() +
       Math.floor(Math.random() * 10).toString();
   
-      setOTP(otp);
+     
     const formData = new FormData();
     sendEmail(
       {
@@ -82,17 +83,17 @@ const BookingForm = (props) => {
     formData.append("photo", data.photo[0]); // Assuming 'photo' is the file input name
   setfData(formData);
     console.log(data);
+    setOTP(otp);
   };
   const otpSubmit = (data) =>{
     const newOtp = data.newOtp;
     if (newOtp==OTP) {
       POST(fData);
-      setOTP(false);
-      Redirect('/')
+      Redirect('/');
     }
     else{
       
-      Redirect('/contact')
+      Redirect('/contact');
     }
   }
   return (
