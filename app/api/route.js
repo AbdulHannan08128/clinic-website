@@ -20,6 +20,6 @@ return NextResponse.json(u)
 
 
 
-export async function POST(request) {  
+export async function POST(request) { 
  return checkDetails(request, NextResponse)
 }
