@@ -197,7 +197,10 @@ const BookingForm = (props) => {
                 selected={field.value}
                 onChange={(date) => field.onChange(date)}
                 dateFormat="dd/MM/yyyy"
+                minDate={new Date()}
                 className={styles.input}
+                showIcon
+                
               />
             )}
           />
