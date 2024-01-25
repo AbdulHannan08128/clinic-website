@@ -17,7 +17,7 @@
     overflow: hidden;
     display: grid;
     place-items: center;
-    animation: err 3s linear 1;
+    animation: err 8s linear 1;
     animation-fill-mode: forwards;
 }
 @keyframes err {
@@ -28,5 +28,10 @@
 @media (max-width:500px){
     .wrapper{
         position: static;
+
+    }
+    .wrapper div.error{
+        width: 100vw;
+        
     }
 }
