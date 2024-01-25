@@ -7,7 +7,7 @@ const Appointment = mongoose.models.Appointment || mongoose.model('Appointment',
   email: { type: String },
   number:{type:Number, required:true},
   appointmentDate:{type: String, required: true},
-  photo:{type:String, required:true} 
+  photo:{type:Blob} 
   // other fields...
 }));
  

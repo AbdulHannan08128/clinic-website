@@ -8,7 +8,7 @@ export default function page() {
 <>
 <Navbar/>
 
-    <div style={{display:'grid', placeItems:'center', height:'100vh', margin:'100px 0'}}>
+    <div style={{display:'grid', placeItems:'center', height:'100vh', margin:'0 0'}}>
     <Book URL={process.env.uploadUrl}/> 
     </div>
 <Contact/>
