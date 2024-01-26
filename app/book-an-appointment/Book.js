@@ -39,6 +39,7 @@ const BookingForm = (props) => {
   const [fData, setfData] = useState();
   const [otpValue, setOtpValue] = useState(""); // Add this state for OTP input
   const [kb, setkb] = useState(false)
+  const [invotp, setinvotp] = useState(false)
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
@@ -96,23 +97,37 @@ const BookingForm = (props) => {
         if (success) {
           console.log("Form Submitted Successfully");
           Redirect('/');
+
         } else {
           setkb(true);
           setOTP(false);
          
         }
-      });
-     
-    
+
+      }
+      
+      );
+
      
       
     }
+    else{
+      setinvotp(true);
+      setTimeout(() => {
+        setinvotp(false);
+      }, 8000);
+
+    }
+   
   };
 
   return (
     <div className={styles.cont}>
       {OTP ? (
+        <>
+          {invotp?<Error errors={['Invalid Otp!']}/>:''}
         <form onSubmit={handleSubmit(otpSubmit)} className={styles.bookingOtpForm}>
+        
           <label className={styles.label}>Enter OTP:</label>
           <OTPInput
       value={otpValue}
@@ -129,6 +144,7 @@ const BookingForm = (props) => {
             Book Appointment
           </button>
         </form>
+        </> 
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.bookingForm}>
           {/* Photo input */}
@@ -207,7 +223,7 @@ const BookingForm = (props) => {
           <br />
 
           <button type="submit" className={styles.button}>
-            Book Appointment
+            Request OTP
           </button>
         </form>
       )}

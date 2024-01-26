@@ -28,10 +28,12 @@
 @media (max-width:500px){
     .wrapper{
         position: static;
+        margin: auto;
 
     }
     .wrapper div.error{
-        width: 100vw;
+        width: 80vw;
+        margin: auto;
         
     }
 }
