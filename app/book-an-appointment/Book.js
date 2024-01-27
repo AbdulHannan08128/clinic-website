@@ -41,6 +41,7 @@ const BookingForm = (props) => {
   const [otpValue, setOtpValue] = useState(""); // Add this state for OTP input
   const [kb, setkb] = useState(false)
   const [invotp, setinvotp] = useState(false)
+  const [submitting, setsubmitting] = useState(false)
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
@@ -92,16 +93,19 @@ const BookingForm = (props) => {
   };
 
   const otpSubmit = () => {
+    setsubmitting(true);
     if (otpValue === OTP) {
       post(props.URL, fData, (data) => {
         let success = data.data.success;
         if (success) {
           console.log("Form Submitted Successfully");
           Redirect('/');
+          setsubmitting(false)
 
         } else {
           setkb(true);
           setOTP(false);
+          setsubmitting(false)
          
         }
 
@@ -116,9 +120,12 @@ const BookingForm = (props) => {
       setinvotp(true);
       setTimeout(() => {
         setinvotp(false);
+
       }, 8000);
+      setsubmitting(false)
 
     }
+  
    
   };
 
@@ -141,9 +148,11 @@ const BookingForm = (props) => {
       isInputNum={true}
       
     />
-          <button type="submit" className={styles.button}>
-            Book Appointment
-          </button>
+          {submitting?<button type="submit" className={styles.button} style={{display: 'flex', gap:'10px', alignItems:'center', justifyContent:'center'}}>
+           <span className={styles.loading}></span>
+          </button>:<button type="submit" className={styles.button}>
+           Book Appointment 
+          </button>}
         </form>
         </> 
       ) : (
@@ -186,6 +195,7 @@ const BookingForm = (props) => {
               </div>
             )}
           </label>
+          {/* <span className={styles.loading}></span> */}
 
           <label className={styles.label}>Name:</label>
           <input
