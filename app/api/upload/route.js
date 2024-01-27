@@ -19,7 +19,7 @@ export async function POST(request) {
       const maxSize = 50 * 1024; // 50KB in bytes
       if (buffer.length > maxSize) {
         return NextResponse.json({ message: "!50kb", success: false });
-      } else {
+      } else if(buffer.length < maxSize){
         // Convert image data to Base64
         const base64Image = buffer.toString("base64");
         // Create an appointment object
@@ -34,12 +34,12 @@ export async function POST(request) {
         await addAppointment(appointment, () => {
           console.log("Appointment Booked Successfully... Image Stored");
         });
-        NextResponse.json({
+        return NextResponse.json({
           message: "Appointment Booked Successfully",
           success: true,
         });
       }
-      NextResponse.json({ message: "Unsupported Error", success: false });
+      return NextResponse.json({ message: "Unsupported Error", success: false });
     }
   } catch (error) {
     console.error("Error processing form data:", error);
