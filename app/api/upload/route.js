@@ -10,7 +10,7 @@ export async function POST(request) {
 
     if (!file) {
       return NextResponse.json({ message: "No image found", success: false });
-    } else {
+    } 
       // Extract data from file
       const byteData = await file.arrayBuffer();
       const buffer = Buffer.from(byteData);
@@ -40,7 +40,7 @@ export async function POST(request) {
         });
       
       
-    }
+    
   } catch (error) {
     console.error("Error processing form data:", error);
     return NextResponse.json(
