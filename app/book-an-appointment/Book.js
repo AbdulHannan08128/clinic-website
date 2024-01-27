@@ -11,6 +11,7 @@ import Image from "next/image";
 import { sendEmail } from "../../functions/sendEmail";
 import Redirect from '../auth/login/Redirect';
 import Error from '../../components/Form-Contact/Error'
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 const BookingForm = (props) => {
   async function POST(formData) {
@@ -164,7 +165,7 @@ const BookingForm = (props) => {
           />
 
           {/* Display selected image */}
-          <label htmlFor="file">
+          <label htmlFor="file" data-tooltip-id="kb">
             {selectedImage ? (
               <div className={styles.imagePreview}>
                 <img
@@ -201,7 +202,7 @@ const BookingForm = (props) => {
           <label className={styles.label}>Email:</label>
           <input
             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-            className={styles.input}
+            className={styles.input} data-tooltip-id="email"
           />
 
           <label className={styles.label}>Select Date:</label>
@@ -228,6 +229,19 @@ const BookingForm = (props) => {
         </form>
       )}
       {kb?<Error errors={['Image Should Be Less Than 50kb!']}/>:''}
+      
+      <ReactTooltip
+        id="kb"
+        place="left"
+        variant="info"
+        content="Image Should be Less Than 50kb..."
+      />
+      <ReactTooltip
+        id="email"
+        place="left"
+        variant="info"
+        content="You Will Get OTP on this Email..."
+      />
     </div>
     
   );
