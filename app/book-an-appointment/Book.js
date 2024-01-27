@@ -97,6 +97,7 @@ const BookingForm = (props) => {
     if (otpValue === OTP) {
       post(props.URL, fData, (data) => {
         let success = data.data.success;
+        alert(data.data.message, success)
         if (success) {
           console.log("Form Submitted Successfully");
           Redirect('/');
