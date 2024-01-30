@@ -34,7 +34,7 @@ export async function POST(request) {
 
         try {
           const newAppointment = new Appointment(appointment);
-          await newAppointment.save();
+           newAppointment.save();
           console.log('Success');
            
           
