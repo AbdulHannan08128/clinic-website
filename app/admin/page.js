@@ -22,7 +22,9 @@ async function getData(Data){
 export default async function page() {
   let appointments;
   await getData((Data)=>{
-      appointments=Data.data
+      appointments=Data.data;
+      console.log(appointments.length);
+      console.log(appointments);
    });
  
 
