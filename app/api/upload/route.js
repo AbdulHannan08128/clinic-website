@@ -2,6 +2,7 @@
 import { NextResponse } from "next/server";
 
 import { addAppointment } from "@/functions/addAppointment";
+import Appointment from "@/models/Appointment";
 
 export async function POST(request) {
   try {
@@ -31,9 +32,15 @@ export async function POST(request) {
           photo: base64Image,
         };
 
-        await addAppointment(appointment, () => {
-          console.log("Appointment Booked Successfully... Image Stored");
-        });
+        try {
+          const newAppointment = new Appointment(data);
+          await newAppointment.save();
+          console.log('Success');
+           
+          
+        } catch (error) {
+          console.log('Failed');
+        }
         return NextResponse.json({
           message: "Appointment Booked Successfully",
           success: true,
