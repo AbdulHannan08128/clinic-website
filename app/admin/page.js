@@ -21,8 +21,11 @@ async function getData(Data){
 }
 export default async function page() {
   let appointments;
+  let numberapp;
   await getData((Data)=>{
       appointments=Data.data
+      numberapp=appointments.length;
+      
    });
  
 
@@ -31,7 +34,7 @@ export default async function page() {
     <div className={styles.ul}>
        <div>
         <span className={styles.icon}><AppointmentIcon/></span>
-        <span className={styles.details}><span>{appointments.length}</span>Total Appointments</span>
+        <span className={styles.details}><span>{numberapp}</span>Total Appointments</span>
        </div>
        <div className={styles.sec}>
         <span className={styles.icon}><PlusIcon/></span>
