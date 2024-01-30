@@ -1,33 +1,34 @@
 'use client'
-import {get} from '../../../functions/axios.get'
-import {useState, useEffect} from 'react'
-export default async function Appointment(props) {
-  const [Appointments, setAppointments] = useState([{username:'name'}]);
-    async function getData(success){
-        await get(props.URL, (data)=>{
-            console.log('Data Fetch Successful');
-            
-            try {
-                setAppointments([{username:'Username'}]);  
-                
-            } catch (error) {
-                alert('Error!')
-            }
-            
-            
-           })
+import { get } from '../../../functions/axios.get'
+import { useState, useEffect } from 'react'
+
+export default function Appointment(props) {
+  const [appointments, setAppointments] = useState([]); // Initialize with an empty array
+
+  async function getData() {
+    try {
+      await get(props.URL, (data)=>{
+        console.log('Data Fetch Successful', data);
+        setAppointments(data.data); // Set appointments with the data received
+        
+      });
+       // You can alert or console.log the data
+    } catch (error) {
+      console.error('Error fetching data', error);
     }
-   
-    await getData();
-   
- 
+  }
+
+  useEffect(() => {
+    getData();
+  }, []); // Empty dependency array ensures that the effect runs only once on mount
 
   return (
     <>
-    <h1>Appointments</h1>
-      {Appointments.map((appointment, i) => {
-         return <div key={i}>{appointment.username}</div>
-      })}
+      <h1>Appointments</h1>
+      {/* Map through appointments if it's an array */}
+      {appointments && appointments.map((appointment, i) => (
+        <div key={i}>{appointment.username}</div>
+      ))}
     </>
-  )
+  );
 }
