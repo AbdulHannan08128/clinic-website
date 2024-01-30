@@ -9,14 +9,29 @@ import MessageIcon from './adminComponents/Icons/Message'
 import SettingIcon from './adminComponents/Icons/Change'
 import PersonAddIcon from './adminComponents/Icons/Patient'
 import WebIcon from './adminComponents/Icons/Website'
+import {get} from '../../functions/axios.get'
 
-export default function page() {
+
+async function getData(Data){
+   await get(process.env.appointmentURL, (data)=>{
+    console.log('Data Fetch Successful');
+    Data(data);
+    
+   })
+}
+export default async function page() {
+  let appointments;
+  await getData((Data)=>{
+      appointments=Data.data
+   });
+ 
+
   return (
     <>
     <div className={styles.ul}>
        <div>
         <span className={styles.icon}><AppointmentIcon/></span>
-        <span className={styles.details}><span>121</span>Total Appointments</span>
+        <span className={styles.details}><span>{appointments.length}</span>Total Appointments</span>
        </div>
        <div className={styles.sec}>
         <span className={styles.icon}><PlusIcon/></span>

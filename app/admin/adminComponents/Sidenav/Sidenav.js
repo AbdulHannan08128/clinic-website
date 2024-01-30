@@ -29,7 +29,7 @@ export default function Sidenav() {
               <Link href='/admin' className='drop'>Appointments</Link>
               <span className='dropdown'>
                 <span><Link href='/admin'>Add Appointment</Link></span>
-                <span><Link href='/admin'>View Appointments</Link></span>
+                <span><Link href='/admin/view-appointments'>View Appointments</Link></span>
               </span>
             </li>
             <li>

@@ -12,7 +12,7 @@ export function middleware(request) {
   const cookie = request.cookies.get("auth");
   const url = request.url;
   const path = request.nextUrl.pathname;
-  if (path=='/api'||path=='/api/admin/login') {
+  if (path=='/api'||path=='/api/admin/login'||path=='/api/upload'||path=='/api/admin/appointment') {
   if (auth == process.env.key) {
     isLoggedIn = true;
   } else {
@@ -49,6 +49,6 @@ else {
 }
 
 export const config = {
-  matcher: ["/api","/admin",'/api/admin/login']
+  matcher: ["/api","/admin",'/api/admin/login', '/api/upload','/api/admin/appointment']
 
 };

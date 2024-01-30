@@ -12,13 +12,6 @@ import Email from '../components/Icons/Email'
  import Footer from '../components/Footer/Foot'
 
  async function getData(success) {
-
-
- 
-
-
- 
-
   await get(process.env.url,(data)=>{
      
      success(data)
