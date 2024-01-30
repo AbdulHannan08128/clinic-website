@@ -8,18 +8,20 @@ export default function Appointment(props) {
   async function getData() {
     try {
       await get(props.URL, (data)=>{
-        console.log('Data Fetch Successful', data);
+        console.log('Data Fetch Successful');
         setAppointments(data.data); // Set appointments with the data received
         
       });
        // You can alert or console.log the data
     } catch (error) {
-      console.error('Error fetching data', error);
+      console.error('Error fetching data');
     }
   }
 
 
-    getData();
+    setInterval(() => {
+        getData();
+    }, 2000);
 // Empty dependency array ensures that the effect runs only once on mount
 
   return (
@@ -28,7 +30,7 @@ export default function Appointment(props) {
       {/* Map through appointments if it's an array */}
       {appointments ? appointments.map((appointment, i) => (
         <div key={i}>{appointment.username}</div>
-      )):'No Data'}
+      )):''}
     </>
   );
 }

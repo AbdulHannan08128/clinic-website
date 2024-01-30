@@ -22,11 +22,16 @@ async function getData(Data){
 export default async function page() {
   let appointments;
   await getData((Data)=>{
-      appointments=Data.data;
-      console.log(appointments.length);
-      console.log(appointments);
+   appointments=Data.data; 
+   
+});
+ setInterval(async () => {
+   await getData((Data)=>{
+      appointments=Data.data; 
+      
    });
  
+ }, 2000);
 
   return (
     <>
