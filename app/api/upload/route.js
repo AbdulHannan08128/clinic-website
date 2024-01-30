@@ -33,13 +33,13 @@ export async function POST(request) {
         };
 
         try {
-          const newAppointment = new Appointment(data);
+          const newAppointment = new Appointment(appointment);
           await newAppointment.save();
           console.log('Success');
            
           
         } catch (error) {
-          console.log('Failed');
+          console.log(error);
         }
         return NextResponse.json({
           message: "Appointment Booked Successfully",
