@@ -19,9 +19,11 @@ export default function Appointment(props) {
   }
 
 
-    setInterval(() => {
+    useEffect(
+    ()=>{
         getData();
-    }, 2000);
+    }
+    )
 // Empty dependency array ensures that the effect runs only once on mount
 
   return (

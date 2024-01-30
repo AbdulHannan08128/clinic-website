@@ -25,13 +25,10 @@ export default async function page() {
    appointments=Data.data; 
    
 });
- setInterval(async () => {
-   await getData((Data)=>{
-      appointments=Data.data; 
-      
-   });
+
+  
  
- }, 2000);
+ 
 
   return (
     <>
