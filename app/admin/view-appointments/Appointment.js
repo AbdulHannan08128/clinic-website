@@ -18,17 +18,17 @@ export default function Appointment(props) {
     }
   }
 
-  useEffect(() => {
+
     getData();
-  }, []); // Empty dependency array ensures that the effect runs only once on mount
+// Empty dependency array ensures that the effect runs only once on mount
 
   return (
     <>
       <h1>Appointments</h1>
       {/* Map through appointments if it's an array */}
-      {appointments && appointments.map((appointment, i) => (
+      {appointments ? appointments.map((appointment, i) => (
         <div key={i}>{appointment.username}</div>
-      ))}
+      )):'No Data'}
     </>
   );
 }
