@@ -1,0 +1,25 @@
+.chart{
+    width: 100%;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.chart div{
+    width: 580px;
+    height: 380px;
+    
+   
+}
+
+@media (max-width:650px) {
+    .chart div{
+       
+       overflow-x: scroll;
+       width: 100%;
+       height: 100%;
+    }
+}
