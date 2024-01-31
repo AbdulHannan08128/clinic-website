@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 import { addAppointment } from "@/functions/addAppointment";
 import Appointment from "@/models/Appointment";
-
+export const dynamic = "force-dynamic";
 export async function POST(request) {
   try {
     let data = await request.formData();

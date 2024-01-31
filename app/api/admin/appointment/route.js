@@ -2,7 +2,7 @@ import {NextResponse} from 'next/server'
 import connectDB from '@/utils/db';
 
 import { getAppointment } from '@/functions/getAppointment';
-
+export const dynamic = "force-dynamic";
 
 //*****https://nextjs.org/docs/app/api-reference/functions/next-request******
 

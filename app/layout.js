@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar/Nav'
 import Footer from '../components/Footer/Foot'
 import {AOSInit} from './AOS/aos'
 const inter = Inter({ subsets: ['latin'] })
-
+export const dynamic = "force-dynamic";
 export const metadata = {
   title: 'Golden Hands',
   description: 'A clinic opening soon in Beehama Ganderbal...',
