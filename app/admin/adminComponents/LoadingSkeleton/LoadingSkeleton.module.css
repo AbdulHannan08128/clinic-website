@@ -7,8 +7,9 @@
   justify-content: baseline;
   height: 100vh;
   padding: 10px;
-  overflow: hidden;
+  overflow: scroll;
   background-color: #000; /* Set the background color to black */
+  
  
 }
 
@@ -21,9 +22,4 @@
 }
 
 /* Additional styles for responsiveness */
-@media (max-width: 500px) {
-  .skeletonBlock {
-    height: 15px;
-    margin-bottom: 8px;
-  }
-}
+

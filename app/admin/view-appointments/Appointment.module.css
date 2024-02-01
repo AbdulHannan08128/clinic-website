@@ -35,3 +35,40 @@
 .head tr td{
     padding: 0px 20px !important;
 }
+
+.search{
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: rgba(var(--card-rgb), 0.5);
+    border: 2px solid white;
+}
+.sIcon{
+    position: relative;
+    right: 50px;
+    top: 17px;
+    
+}
+.icon{
+    font-size: 3rem !important;
+    
+}
+
+@media (max-width:600px){
+    .search{
+        width: 270px;
+       
+    }
+}
+
+@media (max-width:350px) {
+    .search{
+        width: 150px;
+       
+    }
+}
