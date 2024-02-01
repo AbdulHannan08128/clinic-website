@@ -19,7 +19,7 @@ export function middleware(request) {
     isLoggedIn = false;
   }
 }
-else if(path=='/admin'){
+else if(path=='/admin'||path=='/admin/view-appointments'){
   if (cookie) {
     
   if (cookie.value==process.env.key) {
@@ -49,6 +49,6 @@ else {
 }
 
 export const config = {
-  matcher: ["/api","/admin",'/api/admin/login', '/api/upload','/api/admin/appointment']
+  matcher: ["/api","/admin",'/api/admin/login', '/api/upload','/api/admin/appointment', '/admin/view-appointments']
 
 };
