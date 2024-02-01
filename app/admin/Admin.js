@@ -21,9 +21,9 @@ export const maxDuration = 5
 
 
 export default function page(props) {
+      
 
-
-
+  
     const [appointments, setAppointments] = useState([]); // Initialize with an empty array
 
     async function getData() {
@@ -41,7 +41,7 @@ export default function page(props) {
   
    
     const [refreshToken, setRefreshToken] = useState(Math.random());
-  
+ 
           useEffect(() => {
               getData();
             }, [refreshToken]);

@@ -1,0 +1,37 @@
+.appointments{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    overflow: scroll;
+    border: 2px solid green;
+}
+
+.binimage{
+   border-radius: 50%;
+}
+.binimage:hover{
+    scale: 4;
+    cursor: pointer;
+ }
+
+
+.tr td{
+   padding: 5px 10px;
+   
+
+}
+.tr{
+    background: rgba(var(--card-rgb), 0.3);
+}
+.head{
+    width: 100%;
+    height: 50px;
+    background: rgba(var(--card-rgb), 0.5);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  padding: 10px 10px;
+ 
+  top: 0;
+}
+.head tr td{
+    padding: 0px 20px !important;
+}

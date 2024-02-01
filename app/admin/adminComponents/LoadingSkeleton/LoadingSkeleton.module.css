@@ -1,0 +1,29 @@
+/* LoadingSkeleton.module.css */
+
+.loadingSkeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #000; /* Set the background color to black */
+ 
+}
+
+.skeletonBlock {
+  height: 50px;
+  width: 100%;
+  background-color: #393838; /* Light gray or your preferred color */
+  margin-bottom: 10px; /* Adjust spacing between skeleton blocks */
+  border-radius: 4px;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 500px) {
+  .skeletonBlock {
+    height: 15px;
+    margin-bottom: 8px;
+  }
+}
