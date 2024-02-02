@@ -16,7 +16,7 @@ export default function Sidenav() {
            
             <span className='img'></span>
             <span className='info'>
-            <span className='name'>Dr. Aijaz</span>
+            <span className='name'>Dr. XYZ</span>
             <span className='role'>Admin</span>
             </span>
            
