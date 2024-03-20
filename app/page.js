@@ -11,25 +11,12 @@ import Email from '../components/Icons/Email'
  import Navbar from '../components/Navbar/Nav'
  import Footer from '../components/Footer/Foot'
 
- async function getData(success) {
-  await get(process.env.url,(data)=>{
-     
-     success(data)
-  },
-  (err)=>{
-      console.log('Something went wrong while sending get request...');
-  });
-  
-}
 
 
 
 
 export default async function Home() {
-let data;
- await getData((Data)=>{
-     data = Data.data; 
- })
+
 
 //  console.log(data);
   return (
